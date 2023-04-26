@@ -57,16 +57,14 @@ float max1(float n, float m)
 int size() {
 	char a1[10];
 	char a2[2];
-	return sizeof(a1) //Исправлено перемножение операторов sizeof()
+	return sizeof(a1); //Исправлено перемножение операторов sizeof()
 }
 
 int foo() {
 	int f1 = 1, f2 = 534; 
     int foo1 = f1 - f2 * f2;
-	if (foo1 != 0) {
-		foo1++;
-	}
-//	return foo1;
+		foo1++; //Исправлено всегда верное вырание, убран условный оператор if()
+
 }
 int main() {
 	double a, b, r, d, s, i, pi = 3.14;
