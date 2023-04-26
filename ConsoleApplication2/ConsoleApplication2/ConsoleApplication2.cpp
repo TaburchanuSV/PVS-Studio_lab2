@@ -35,16 +35,8 @@ int main()
 
 }*/
 using namespace std;
-float max(float n, float m)
-{
-	float y = 0;
-	if (n > m) {
-		y = n;
-	}
-	else y = m;
-	return y;
-}
-float max1(float n, float m)
+float max(float n, float m) //Исравлена ошибка эквивалентных двух функций с одинаковым телом, была удалена
+                            //одна из функций
 {
 	float y = 0;
 	if (n > m) {
@@ -54,23 +46,22 @@ float max1(float n, float m)
 	return y;
 }
 
+
 int size() {
 	char a1[10];
 	char a2[2];
-	return sizeof(a1) * sizeof(a2);
+	return sizeof(a1); //Исправлено перемножение операторов sizeof()
 }
 
 int foo() {
 	int f1 = 1, f2 = 534; 
     int foo1 = f1 - f2 * f2;
-	if (foo1 != 0) {
-		foo1++;
-	}
-//	return foo1;
+		foo1++; //Исправлено всегда верное вырание, убран условный оператор if()
+		return foo1; //Исправлено, функция foo() возвращет значение foo1()
 }
 int main() {
 	double a, b, r, d, s, i, pi = 3.14;
-	int x = 0;
+	int x = 13;
 	cout << "a = "; cin >> a;
 	cout << "b = "; cin >> b;
 
@@ -82,7 +73,7 @@ int main() {
 
 	s = max(r + (d * d), pi);
 	cout << "s = " << s << endl;
-	double f = s / x; 
+	double f = s / x; //Исправлена ошибка деление на ноль, заменили значение x
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
