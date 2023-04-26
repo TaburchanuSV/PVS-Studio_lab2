@@ -68,7 +68,7 @@ int foo() {
 }
 int main() {
 	double a, b, r, d, s, i, pi = 3.14;
-	int x = 0;
+	int x = 13;
 	cout << "a = "; cin >> a;
 	cout << "b = "; cin >> b;
 
@@ -80,7 +80,7 @@ int main() {
 
 	s = max(r + (d * d), pi);
 	cout << "s = " << s << endl;
-	double f = s / x; 
+	double f = s / x; //Исправлена ошибка деление на ноль, заменили значение x
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
