@@ -57,7 +57,7 @@ float max1(float n, float m)
 int size() {
 	char a1[10];
 	char a2[2];
-	return sizeof(a1) * sizeof(a2);
+	return sizeof(a1) //Исправлено перемножение операторов sizeof()
 }
 
 int foo() {
