@@ -35,7 +35,8 @@ int main()
 
 }*/
 using namespace std;
-float max(float n, float m)
+float max(float n, float m) //Исравлена ошибка эквивалентных двух функций с одинаковым телом, была удалена
+                            //одна из функций
 {
 	float y = 0;
 	if (n > m) {
@@ -44,15 +45,7 @@ float max(float n, float m)
 	else y = m;
 	return y;
 }
-float max1(float n, float m)
-{
-	float y = 0;
-	if (n > m) {
-		y = n;
-	}
-	else y = m;
-	return y;
-}
+
 
 int size() {
 	char a1[10];
